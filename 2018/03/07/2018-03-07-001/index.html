@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>统计学习方法的基本概念 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="基本概念。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="统计学习方法的基本概念">
+<meta property="og:url" content="http://yoursite.com/2018/03/07/2018-03-07-001/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="基本概念。">
+<meta property="og:updated_time" content="2018-03-06T16:52:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="统计学习方法的基本概念">
+<meta name="twitter:description" content="基本概念。">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2018-03-07-001" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/07/2018-03-07-001/" class="article-date">
+  <time datetime="2018-03-07T07:00:00.000Z" itemprop="datePublished">2018-03-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/数据挖掘-机器学习/">数据挖掘/机器学习</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      统计学习方法的基本概念
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1-输入空间和输出空间"><a href="#1-输入空间和输出空间" class="headerlink" title="1. 输入空间和输出空间"></a>1. 输入空间和输出空间</h1><ul>
+<li>输入和输出所有可能取值的集合。通常输出空间小于输入空间（感觉并不一定）。</li>
+<li>每个具体的输入是一个实例，通常由<strong>特征向量</strong>表示，所有特征向量的集合被称为<strong>特征空间</strong></li>
+</ul>
+<h1 id="2-特征空间"><a href="#2-特征空间" class="headerlink" title="2. 特征空间"></a>2. 特征空间</h1><ul>
+<li>每一维对应于一个特征</li>
+<li>可以与输入空间相同，也可以不同，模型实际上都是定义在特征空间上的。</li>
+</ul>
+<h1 id="3-回归问题，分类问题和标注问题"><a href="#3-回归问题，分类问题和标注问题" class="headerlink" title="3.回归问题，分类问题和标注问题"></a>3.回归问题，分类问题和标注问题</h1><ul>
+<li>回归问题：输入变量与输出变量均为连续变量的预测问题（明天天气）</li>
+<li>分类问题：输出变量为有限个离散变量的预测问题（打标签，把用户分类）</li>
+<li>标注问题：输入变量与输出变量均为变量序列的预测问题（？）</li>
+</ul>
+<h1 id="4-联合概率分布（监督学习关于数据的基本假设之一）"><a href="#4-联合概率分布（监督学习关于数据的基本假设之一）" class="headerlink" title="4.联合概率分布（监督学习关于数据的基本假设之一）"></a>4.联合概率分布（监督学习关于数据的基本假设之一）</h1><p>监督学习假设输入和输出的随机变量是遵循联合概率分布P(X,Y)【分布（密度）函数】独立同分布产生的。</p>
+<h1 id="5-假设空间"><a href="#5-假设空间" class="headerlink" title="5.假设空间"></a>5.假设空间</h1><p>一个由输入到输出的映射，写作P(y|x)或y=f(x)</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/03/07/2018-03-07-001/" data-id="cjegvmbmc0001pwnu8nlfn76e" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/03/07/2017-03-07-002/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          统计学习三要素
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/03/07/2018-03-07-summary/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">参与数个面试后对自我认知的更新和总结</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Kategorien</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/数据挖掘-机器学习/">数据挖掘/机器学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/杂谈/">杂谈</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/03/07/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/07/2017-03-07-002/">统计学习三要素</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/07/2018-03-07-001/">统计学习方法的基本概念</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/07/2018-03-07-summary/">参与数个面试后对自我认知的更新和总结</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

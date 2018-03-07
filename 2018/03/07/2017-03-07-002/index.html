@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>统计学习三要素 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="三要素，常用损失函数，风险函数，风险最小化问题等。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="统计学习三要素">
+<meta property="og:url" content="http://yoursite.com/2018/03/07/2017-03-07-002/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="三要素，常用损失函数，风险函数，风险最小化问题等。">
+<meta property="og:updated_time" content="2018-03-06T16:52:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="统计学习三要素">
+<meta name="twitter:description" content="三要素，常用损失函数，风险函数，风险最小化问题等。">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2017-03-07-002" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/07/2017-03-07-002/" class="article-date">
+  <time datetime="2018-03-07T08:00:00.000Z" itemprop="datePublished">2018-03-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/数据挖掘-机器学习/">数据挖掘/机器学习</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      统计学习三要素
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1-统计学习三要素"><a href="#1-统计学习三要素" class="headerlink" title="1.统计学习三要素"></a>1.统计学习三要素</h1><p>方法=模型+策略+算法</p>
+<h2 id="1-1模型"><a href="#1-1模型" class="headerlink" title="1.1模型"></a>1.1模型</h2><p>要学习的条件概率分布或决策函数。<br>模型的<strong>假设空间</strong>包含所有可能的条件概率分布或决策函数。</p>
+<h2 id="1-2策略"><a href="#1-2策略" class="headerlink" title="1.2策略"></a>1.2策略</h2><p>损失函数（一次预测的好坏）和风险函数（平均意义下模型预测的好坏）</p>
+<p>###1.2.1 损失函数</p>
+<ul>
+<li>0-1损失函数</li>
+<li>平方损失函数</li>
+<li>绝对损失函数</li>
+<li>对数损失函数/对数似然损失函数<br>###1.2.2 风险函数<br>遵循<strong>联合分布</strong>P(X,Y)，损失函数的期望：<br>这是理论上模型f(X)关于<strong>联合分布</strong>P(X,Y)的平均意义下的损失，称为<strong>风险函数</strong>或<strong>期望损失</strong>。<br>可以发现由于联合分布函数的未知，期望风险是否为最小也是未知的。<br>模型f(X)关于训练数据集的平均损失称为<strong>经验风险</strong>或者<strong>经验损失</strong>：<br>期望风险是模型关于联合分布的期望损失，经验风险是模型关于训练样本集的平均损失。根据大数定律，当样本N趋于正无穷时，经验风险趋于期望风险。<br>因此，期望风险可以通过经验风险来预测或者说矫正。<br>###1.2.3 经验风险最小化与结构风险最小化<br>1.经验风险最小化（ERM）<br>认为经验风险最小的模型就是最优的模型，<strong>极大似然估计</strong>就是一个例子，当模型是<strong>条件概率分布</strong>，损失函数是<strong>对数损失函数</strong>时，经验风险最小化就<strong>等价</strong>于极大似然估计。<br>2.结构风险最小化（SRM）<br>当样本容量过小，ERM的效果就未必很好，会产生<strong>过拟合</strong>现象。<br>结构风险最小化等价于<strong>正则化</strong><br>贝叶斯估计中的最大后验概率估计（MAP）就是一个例子（条件概率分布，对数损失函数，模型复杂度由模型的先验概率表示）<br>##1.3 算法<br>学习模型的具体计算方法。根据学习策略，从假设空间中选取最优模型，并考虑使用什么方法求解最优模型。</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/03/07/2017-03-07-002/" data-id="cjegvmbm50000pwnuqf1ny1ka" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/03/07/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/03/07/2018-03-07-001/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">统计学习方法的基本概念</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Kategorien</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/数据挖掘-机器学习/">数据挖掘/机器学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/杂谈/">杂谈</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/03/07/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/07/2017-03-07-002/">统计学习三要素</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/07/2018-03-07-001/">统计学习方法的基本概念</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/07/2018-03-07-summary/">参与数个面试后对自我认知的更新和总结</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
