@@ -79,13 +79,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tina Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="三要素，常用损失函数，风险函数，风险最小化问题等。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="统计学习三要素">
+<meta property="og:url" content="http://yoursite.com/2018/03/07/2017-03-08-001/2017-03-08-001/index.html">
 <meta property="og:site_name" content="Tina Blog">
+<meta property="og:description" content="三要素，常用损失函数，风险函数，风险最小化问题等。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-03-08T03:40:51.607Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tina Blog">
+<meta name="twitter:title" content="统计学习三要素">
+<meta name="twitter:description" content="三要素，常用损失函数，风险函数，风险最小化问题等。">
 
 
 
@@ -115,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/07/2017-03-08-001/2017-03-08-001/"/>
 
 
 
 
 
-  <title>Tina Blog</title>
+  <title>统计学习三要素 | Tina Blog</title>
   
 
 
@@ -140,8 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -234,9 +237,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -266,9 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/07/2017-03-08-001/2017-03-08-001/" itemprop="url">统计学习三要素</a></h1>
+          <h1 class="post-title" itemprop="name headline">统计学习三要素</h1>
         
 
         <div class="post-meta">
@@ -326,6 +327,10 @@
           
 
           
+              <div class="post-description">
+                  三要素，常用损失函数，风险函数，风险最小化问题等。
+              </div>
+          
 
         </div>
       </header>
@@ -340,16 +345,16 @@
       
 
       
-        
-          三要素，常用损失函数，风险函数，风险最小化问题等。
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/07/2017-03-08-001/2017-03-08-001/">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <p><strong>方法=模型+策略+算法</strong></p>
+<h1 id="1模型"><a href="#1模型" class="headerlink" title="1模型"></a>1模型</h1><p>要学习的条件概率分布或决策函数。<br>模型的<strong>假设空间</strong>包含所有可能的条件概率分布或决策函数。</p>
+<h1 id="2策略"><a href="#2策略" class="headerlink" title="2策略"></a>2策略</h1><p>损失函数（一次预测的好坏）和风险函数（平均意义下模型预测的好坏）</p>
+<h2 id="2-1-损失函数"><a href="#2-1-损失函数" class="headerlink" title="2.1 损失函数"></a>2.1 损失函数</h2><ul>
+<li>0-1损失函数</li>
+<li>平方损失函数</li>
+<li>绝对损失函数</li>
+<li>对数损失函数/对数似然损失函数<h2 id="2-2-风险函数"><a href="#2-2-风险函数" class="headerlink" title="2.2 风险函数"></a>2.2 风险函数</h2>遵循<strong>联合分布</strong>P(X,Y)，损失函数的期望：<br>这是理论上模型f(X)关于<strong>联合分布</strong>P(X,Y)的平均意义下的损失，称为<strong>风险函数</strong>或<strong>期望损失</strong>。<br>可以发现由于联合分布函数的未知，期望风险是否为最小也是未知的。<br>模型f(X)关于训练数据集的平均损失称为<strong>经验风险</strong>或者<strong>经验损失</strong>：<br>期望风险是模型关于联合分布的期望损失，经验风险是模型关于训练样本集的平均损失。根据大数定律，当样本N趋于正无穷时，经验风险趋于期望风险。<br>因此，期望风险可以通过经验风险来预测或者说矫正。<h2 id="2-3-经验风险最小化与结构风险最小化"><a href="#2-3-经验风险最小化与结构风险最小化" class="headerlink" title="2.3 经验风险最小化与结构风险最小化"></a>2.3 经验风险最小化与结构风险最小化</h2>1.经验风险最小化（ERM）<br>认为经验风险最小的模型就是最优的模型，<strong>极大似然估计</strong>就是一个例子，当模型是<strong>条件概率分布</strong>，损失函数是<strong>对数损失函数</strong>时，经验风险最小化就<strong>等价</strong>于极大似然估计。<br>2.结构风险最小化（SRM）<br>当样本容量过小，ERM的效果就未必很好，会产生<strong>过拟合</strong>现象。<br>结构风险最小化等价于<strong>正则化</strong><br>贝叶斯估计中的最大后验概率估计（MAP）就是一个例子（条件概率分布，对数损失函数，模型复杂度由模型的先验概率表示）<h1 id="3-算法"><a href="#3-算法" class="headerlink" title="3 算法"></a>3 算法</h1>学习模型的具体计算方法。根据学习策略，从假设空间中选取最优模型，并考虑使用什么方法求解最优模型。</li>
+</ul>
+
       
     </div>
     
@@ -366,12 +371,28 @@
       
 
       
+      
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/07/2018-03-07-001/" rel="next" title="统计学习方法的基本概念">
+                <i class="fa fa-chevron-left"></i> 统计学习方法的基本概念
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -381,302 +402,11 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/07/2018-03-07-001/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tina Hu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/tina.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tina Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/07/2018-03-07-001/" itemprop="url">统计学习方法的基本概念</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-07T15:00:00+08:00">
-                2018-03-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据挖掘-机器学习/" itemprop="url" rel="index">
-                    <span itemprop="name">数据挖掘/机器学习</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          基本概念。
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/07/2018-03-07-001/">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/07/2018-03-07-summary/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tina Hu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/tina.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tina Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/07/2018-03-07-summary/" itemprop="url">参与数个面试后对自我认知的更新和总结</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-07T14:00:00+08:00">
-                2018-03-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/杂谈/" itemprop="url" rel="index">
-                    <span itemprop="name">杂谈</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          最近感到很迷茫，感觉对自我的认知和规划不正确，所以写一个奇怪的随笔总结归纳一下。
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/07/2018-03-07-summary/">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -684,6 +414,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -704,8 +438,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -788,6 +531,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1模型"><span class="nav-number">1.</span> <span class="nav-text">1模型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2策略"><span class="nav-number">2.</span> <span class="nav-text">2策略</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-损失函数"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 损失函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-风险函数"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 风险函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-经验风险最小化与结构风险最小化"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 经验风险最小化与结构风险最小化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-算法"><span class="nav-number">3.</span> <span class="nav-text">3 算法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -921,6 +680,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
