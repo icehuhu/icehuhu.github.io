@@ -82,14 +82,23 @@
 <meta name="description" content="三要素，常用损失函数，风险函数，风险最小化问题等。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="统计学习三要素">
-<meta property="og:url" content="http://yoursite.com/2018/03/07/2017-03-08-001/2017-03-08-001/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/03/07/2017-03-08-001/index.html">
 <meta property="og:site_name" content="Tina Blog">
 <meta property="og:description" content="三要素，常用损失函数，风险函数，风险最小化问题等。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-08T03:40:51.607Z">
+<meta property="og:image" content="http://yoursite.com/2018/03/07/2017-03-08-001/2017-03-08-001/1.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/03/07/2017-03-08-001/2017-03-08-001/2.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/03/07/2017-03-08-001/2017-03-08-001/3.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/03/07/2017-03-08-001/2017-03-08-001/4.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/03/07/2017-03-08-001/2017-03-08-001/5.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/03/07/2017-03-08-001/2017-03-08-001/6.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/03/07/2017-03-08-001/2017-03-08-001/7.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/03/07/2017-03-08-001/2017-03-08-001/8.jpg">
+<meta property="og:updated_time" content="2018-03-09T02:56:42.224Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="统计学习三要素">
 <meta name="twitter:description" content="三要素，常用损失函数，风险函数，风险最小化问题等。">
+<meta name="twitter:image" content="http://yoursite.com/2018/03/07/2017-03-08-001/2017-03-08-001/1.jpg">
 
 
 
@@ -119,7 +128,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/03/07/2017-03-08-001/2017-03-08-001/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/07/2017-03-08-001/"/>
 
 
 
@@ -252,7 +261,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/07/2017-03-08-001/2017-03-08-001/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/07/2017-03-08-001/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tina Hu">
@@ -349,11 +358,14 @@
 <h1 id="1模型"><a href="#1模型" class="headerlink" title="1模型"></a>1模型</h1><p>要学习的条件概率分布或决策函数。<br>模型的<strong>假设空间</strong>包含所有可能的条件概率分布或决策函数。</p>
 <h1 id="2策略"><a href="#2策略" class="headerlink" title="2策略"></a>2策略</h1><p>损失函数（一次预测的好坏）和风险函数（平均意义下模型预测的好坏）</p>
 <h2 id="2-1-损失函数"><a href="#2-1-损失函数" class="headerlink" title="2.1 损失函数"></a>2.1 损失函数</h2><ul>
-<li>0-1损失函数</li>
-<li>平方损失函数</li>
-<li>绝对损失函数</li>
-<li>对数损失函数/对数似然损失函数<h2 id="2-2-风险函数"><a href="#2-2-风险函数" class="headerlink" title="2.2 风险函数"></a>2.2 风险函数</h2>遵循<strong>联合分布</strong>P(X,Y)，损失函数的期望：<br>这是理论上模型f(X)关于<strong>联合分布</strong>P(X,Y)的平均意义下的损失，称为<strong>风险函数</strong>或<strong>期望损失</strong>。<br>可以发现由于联合分布函数的未知，期望风险是否为最小也是未知的。<br>模型f(X)关于训练数据集的平均损失称为<strong>经验风险</strong>或者<strong>经验损失</strong>：<br>期望风险是模型关于联合分布的期望损失，经验风险是模型关于训练样本集的平均损失。根据大数定律，当样本N趋于正无穷时，经验风险趋于期望风险。<br>因此，期望风险可以通过经验风险来预测或者说矫正。<h2 id="2-3-经验风险最小化与结构风险最小化"><a href="#2-3-经验风险最小化与结构风险最小化" class="headerlink" title="2.3 经验风险最小化与结构风险最小化"></a>2.3 经验风险最小化与结构风险最小化</h2>1.经验风险最小化（ERM）<br>认为经验风险最小的模型就是最优的模型，<strong>极大似然估计</strong>就是一个例子，当模型是<strong>条件概率分布</strong>，损失函数是<strong>对数损失函数</strong>时，经验风险最小化就<strong>等价</strong>于极大似然估计。<br>2.结构风险最小化（SRM）<br>当样本容量过小，ERM的效果就未必很好，会产生<strong>过拟合</strong>现象。<br>结构风险最小化等价于<strong>正则化</strong><br>贝叶斯估计中的最大后验概率估计（MAP）就是一个例子（条件概率分布，对数损失函数，模型复杂度由模型的先验概率表示）<h1 id="3-算法"><a href="#3-算法" class="headerlink" title="3 算法"></a>3 算法</h1>学习模型的具体计算方法。根据学习策略，从假设空间中选取最优模型，并考虑使用什么方法求解最优模型。</li>
+<li>0-1损失函数<br><img src="2017-03-08-001/1.jpg" alt="0-1"></li>
+<li>平方损失函数<br><img src="2017-03-08-001/2.jpg" alt="0-1"></li>
+<li>绝对损失函数<br><img src="2017-03-08-001/3.jpg" alt="0-1"></li>
+<li>对数损失函数/对数似然损失函数<br><img src="2017-03-08-001/4.jpg" alt="0-1"></li>
 </ul>
+<h2 id="2-2-风险函数"><a href="#2-2-风险函数" class="headerlink" title="2.2 风险函数"></a>2.2 风险函数</h2><p>遵循<strong>联合分布</strong>P(X,Y)，损失函数的期望：<br><img src="2017-03-08-001/5.jpg" alt="0-1"><br>这是理论上模型f(X)关于<strong>联合分布</strong>P(X,Y)的平均意义下的损失，称为<strong>风险函数</strong>或<strong>期望损失</strong>。<br>可以发现由于联合分布函数的未知，期望风险是否为最小也是未知的。<br>模型f(X)关于训练数据集的平均损失称为<strong>经验风险</strong>或者<strong>经验损失</strong>：<br><img src="2017-03-08-001/6.jpg" alt="0-1"><br>期望风险是模型关于联合分布的期望损失，经验风险是模型关于训练样本集的平均损失。根据大数定律，当样本N趋于正无穷时，经验风险趋于期望风险。<br>因此，期望风险可以通过经验风险来预测或者说矫正。</p>
+<h2 id="2-3-经验风险最小化与结构风险最小化"><a href="#2-3-经验风险最小化与结构风险最小化" class="headerlink" title="2.3 经验风险最小化与结构风险最小化"></a>2.3 经验风险最小化与结构风险最小化</h2><p>1.经验风险最小化（ERM）<br>认为经验风险最小的模型就是最优的模型，<strong>极大似然估计</strong>就是一个例子，当模型是<strong>条件概率分布</strong>，损失函数是<strong>对数损失函数</strong>时，经验风险最小化就<strong>等价</strong>于极大似然估计。<br><img src="2017-03-08-001/7.jpg" alt="0-1"><br>2.结构风险最小化（SRM）<br>当样本容量过小，ERM的效果就未必很好，会产生<strong>过拟合</strong>现象。<br>结构风险最小化等价于<strong>正则化</strong><br><img src="2017-03-08-001/8.jpg" alt="0-1"><br>其中，J(f)为模型的复杂度，这意味着结构风险小需要经验风险和模型复杂度同时小。<br>贝叶斯估计中的最大后验概率估计（MAP）就是一个例子（条件概率分布，对数损失函数，模型复杂度由模型的先验概率表示）</p>
+<h1 id="3-算法"><a href="#3-算法" class="headerlink" title="3 算法"></a>3 算法</h1><p>学习模型的具体计算方法。根据学习策略，从假设空间中选取最优模型，并考虑使用什么方法求解最优模型。</p>
 
       
     </div>
